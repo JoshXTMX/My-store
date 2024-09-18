@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Asegúrate de tener los estilos adecuados para la página del carrito -->
+</head>
+<body>
+  <!-- Encabezado y navegación -->
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="cart.html">Carrito</a>
+      <!-- Otros enlaces de navegación -->
+    </nav>
+  </header>
+
+  <!-- Contenido del carrito -->
+  <div class="checkout-container">
+    <div class="checkout-header">
+      <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Logo" class="checkout-logo">
+      <h2>Carrito > Información > Envíos > Pago</h2>
+    </div>
+
+    <div class="payment-options">
+      <button class="payment-btn shop-pay">Shop Pay</button>
+      <button class="payment-btn paypal">PayPal</button>
+      <button class="payment-btn gpay">G Pay</button>
+    </div>
+
+    <form class="checkout-form">
+      <div class="contact-info">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email">
+        <div class="checkbox">
+          <input type="checkbox" id="subscribe" name="subscribe" checked>
+          <label for="subscribe">Enviarme novedades y ofertas por correo electrónico</label>
+        </div>
+      </div>
+
+      <div class="shipping-info">
+        <label for="country">País/Región</label>
+        <select id="country" name="country">
+          <option value="">Seleccione un país</option>
+          <option value="us">Estados Unidos</option>
+          <option value="cn">China</option>
+          <option value="de">Alemania</option>
+          <option value="uk">Reino Unido</option>
+          <option value="fr">Francia</option>
+          <option value="jp">Japón</option>
+          <option value="ca">Canadá</option>
+          <option value="au">Australia</option>
+          <option value="br">Brasil</option>
+          <option value="in">India</option>
+          <option value="br">Republica Dominicana</option>
+          <option value="other">Otro</option>
+        </select>
+        
+        <!-- Campo adicional para ingresar el país si se selecciona "Otro" -->
+        <div id="other-country-container" style="display: none;">
+          <label for="other-country">Especifica tu país</label>
+          <input type="text" id="other-country" name="other-country" placeholder="Nombre del país">
+        </div>
+      
+        <!-- Otros campos del formulario -->
+        <input type="text" id="first-name" name="first-name" placeholder="Nombre">
+        <input type="text" id="last-name" name="last-name" placeholder="Apellido">
+        <input type="text" id="address" name="address" placeholder="Calle y número de casa">
+      </div>
+      
+      <div class="cart-summary">
+        <h3>Resumen del pedido</h3>
+        <div id="cart-items" class="cart-items">
+          <!-- Aquí se mostrarán los productos del carrito -->
+        </div>
+        <div class="total">
+          <h2>Total: $<span id="cart-total">0.00</span></h2>
+        </div>
+        <button class="checkout-btn">Proceder al Pago</button>
+      </div>
+
+      <div class="discount-code">
+        <input type="text" placeholder="Tarjeta de regalo o código de descuento">
+        <button>Usar</button>
+      </div>
+      <div class="total">
+        <p>Subtotal: 35.99 $</p>
+        <p>Envíos: Calculado en el siguiente paso</p>
+        <h2>Total: 35.99 $</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Mi Tienda Online</p>
+  </footer>
+</body>
+
+<script src="cart.js"></script> 
+</html>
